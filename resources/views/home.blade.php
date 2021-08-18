@@ -13,7 +13,7 @@
     <div class="content-wrapper__box">
         <create-link class="mb-4"></create-link>
         <div class="container">
-            <a href="#">Download this project</a>
+            <a href="https://github.com/darmshot/redirect" rel="nofollow" target="_blank">To Github</a>
         </div>
     </div>
 </div>
