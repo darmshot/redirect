@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/{key}',[\App\Http\Controllers\Api\LinkController::class,'redirect'])->name('link-short-url')
-    ->where('key', '[A-Za-z0-9]{6,6}');
+    ->where('key', '[A-Za-z0-9]{8,8}');

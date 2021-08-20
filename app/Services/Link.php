@@ -47,8 +47,10 @@ class Link
 
     private function createShortUrl($key): string
     {
-        if (Route::has('link-short-url')) {
-            $result = route('link-short-url', ['key' => $key]);
+        $route = config('service_link.route_short');
+
+        if (Route::has($route)) {
+            $result = route($route, ['key' => $key]);
         } else {
             throw new \Exception('Route not found!');
         }
@@ -58,6 +60,6 @@ class Link
 
     private function generateKey($url): string
     {
-        return Str::of($url)->pipe('md5')->limit(6, '');
+        return hash('crc32b',$url,false);
     }
 }

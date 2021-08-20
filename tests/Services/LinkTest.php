@@ -26,14 +26,14 @@ class LinkTest extends TestCase
 
         $shortUrl = $this->link->getShortUrl($url);
 
-        $this->assertTrue($shortUrl === url('53c45f'));
+        $this->assertTrue($shortUrl === url('361029af'));
     }
 
     public function testGetFullUrl()
     {
         $url = 'https://medium.com/@nykolas.z/dns-resolvers-performance-compared-cloudflare-x-google-x-quad9-x-opendns-149e803734e5';
 
-        $fullUrl = $this->link->getFullUrl('53c45f');
+        $fullUrl = $this->link->getFullUrl('361029af');
 
         $this->assertTrue($fullUrl === $url);
 
